@@ -1,0 +1,38 @@
+.price-tag {
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.property-price {
+	font-size: 2em;
+}
+
+.propertydetail {
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.feature-proprety-title {
+	font-size: 2em;
+}
+
+.contact-person {
+ 	font-size: 18px;
+}
+
+.price {
+
+}
+
+.currency {
+	float: left;
+	color: #333f48;;
+}
+
+.property-title {
+{
+
+}
+
+.contact-method ul {
+	text-decoration: none;
+	display: inline;
+}

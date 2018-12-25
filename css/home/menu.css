@@ -1,0 +1,168 @@
+.mh-logo {
+	float: left;
+	text-align: center;
+}
+
+.mh-lang, .mh-phone, .mh-email, .mh-facebook {
+	float: right;
+}
+
+/* Small devices (portait phones, 576px and up) */
+@media (max-width: 575.98px) {
+
+	.mh-logo {
+		float: none;
+		text-align: center;
+	}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 767.98px) { 
+
+	.mh-logo {
+		float: none;
+		text-align: center;
+	}
+
+}
+
+
+/* Small devices (portait phones, 576px and up) */
+@media (max-width: 575.98px) {
+
+	.mh-lang {
+		display: none;
+	}
+
+	.mh-email {
+		float: none;
+		text-align: center;
+	}
+
+	.mh-facebook {
+		display: none;
+	}
+
+	.mh-phone {
+		float: none;
+		text-align: center;
+	}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 767.98px) { 
+
+	.mh-lang {
+		display: none;
+	}
+
+	.mh-email {
+		float: none;
+		text-align: center;
+	}
+
+	.mh-facebook {
+		display: none;
+	}
+
+	.mh-phone {
+		float: none;
+		text-align: center;
+	}
+	
+}
+
+.mh-header-menu {
+	border-top: 3px solid #ec1d23;
+}
+
+.mh-menu-misc {
+	float: right;
+}
+
+.mh-menu {
+	float: right;
+	font-weight: bold;
+}
+
+.mh-menu a {
+	color: #20282e;
+}
+
+.mh-menu a:hover {
+	color: #ec1d23;
+	text-decoration: none;
+
+}
+
+.mh-menu ul {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.mh-menu ul li {
+	list-style: none;
+	text-decoration: none;
+	display: inline-block;
+}
+
+/* Small devices (portait phones, 576px and up) */
+@media (max-width: 575.98px) {
+
+	.mh-header-menu {
+		margin-bottom: 20px;
+	}
+
+	.mh-menu {
+		float: none;
+		text-align: center;
+	}
+
+	.mh-menu-misc {
+		float: none;
+	}
+
+	ul.mh-menu-list > :first-child {
+		display: none;
+	}
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767.98px) { 
+
+	.mh-menu {
+		float: none;
+		text-align: center;
+	}
+
+	.mh-menu-misc {
+		float: none;
+	}
+
+	ul.mh-menu-list > :first-child {
+		display: none;
+	}
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991.98px) {
+
+	.mh-top-bar {
+		margin: auto;
+	}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1199.98px) {
+
+	.mh-top-bar {
+		margin: auto;
+	}	
+
+}

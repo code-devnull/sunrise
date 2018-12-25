@@ -1,0 +1,58 @@
+@import "home/jumbotron.css";
+@import "home/menu.css";
+@import "home/footer.css";
+@import "propertydetails.css";
+@import "carousel.css";
+@import "filter.css";
+
+body {
+	color: #333f48;
+}
+
+.mh-navbar {
+	font-size: 18px;
+	font-weight: bold;
+	color: #ec1d23 !important;
+	margin-bottom: 0px !important;
+	background: #fff !important;
+	border-bottom: 1px solid #ec1d23 !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  	color: #ec1d23 !important;
+}
+
+.mh-navbar-nav {
+	margin: 10px 15px;
+}
+
+/*
+* Web Layout
+*/
+.mh-container {
+	margin-left: auto;
+	margin-right: auto; 
+  	width: 1500px !important;
+}
+
+/*
+* Theme text color
+*/
+.mh-text-red {
+	color: #ec1d23;
+}
+.mh-text-blue {
+	color: #20282e;
+}
+.mh-text-grey {
+	color: #333f48;
+}
+
+.mh-text-white {
+	color: #d2d6da;
+}
+
+.mh-bg-grey {
+	background-color: #333f48;
+}
+
