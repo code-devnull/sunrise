@@ -20,37 +20,46 @@
     <!-- Custom styles for this template -->
     <link href="css/default.css" rel="stylesheet">
     <link href="css/standard.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />   
 </head>
 
 <body>
 
-<div class="text-right pt-2" style="border-top: 5px solid #ec1d23">
+<!-- menu -->
+<div class="mh-header-menu border-bottom py-2 px-md-4">
     <div class="container">
-        <div class="row">
-            <div class="mh-top-bar mauto">
-                <div class="mh-top-bar-phone px-3 mh-text-blue font-weight-bold" style="float: left;"><i class="fas fa-phone" style="color: #ec1d23; font-size:24px"></i> : 2330 9338 | 2330 9222 | 2356 0333  </div>
-                <!-- <div class="mh-top-bar-email px-3 mh-text-blue font-weight-bold" style="float:left;""><i class="fas fa-envelope" style='font-size:24px'></i> : sunrise23309222@yahoo.com.hk </div> -->
-                <div class="mh-top-bar-whatsapp px-3 mh-text-blue font-weight-bold" style="float:left;"><i class="fab fa-whatsapp" style="color: #ec1d23; font-size:24px"></i> 9888 8888</div>
-            </div>  
+        <div class="mh-logo d-flex flex-column flex-md-row align-items-center bg-white">
+            <img class="my-0 mr-md-auto" src="images/sunrise-logo.png" width="200px" alt="sunrise-property-logo">
         </div>
+        
+        <div class="mh-menu-misc">
+            <div class="pb-2">
+                <div class="mh-lang"><i class="fas fa-globe" style="color: #20282e;"></i> ENG | 繁 | 簡 </div>
+                <div class="mh-email px-2"><i class="far fa-envelope" style="color: #20282e;"></i> sunrisehk@yahoo.com.hk</div>
+                <div class="mh-phone px-2"><i class="fas fa-phone" style="color: #20282e;"></i> 2330 9338 | 2330 9222 | 256 0333</div>
+                <div class="mh-facebook px-2"><h5><i class="fab fa-facebook-square" style="color: #4064ac;"></i></h5></div>
+                <div style="clear:both"></div>
+            </div>
+            <div class="mh-menu my-2">
+                <ul class="mh-menu-list">
+                    <li class="mh-home px-2"><a href="index.html"><i class="fas fa-home" style="color: #ec1d23; font-size:26px"></i></li>
+                    <li class="mh-buy px-2"><a href="buy.html">買樓</li>
+                    <li class="mh-lease px-2"><a href="#">租樓</a></li>
+                    <li class="mh-aboutus px-2"><a href="#">關於太陽</a></li>
+                    <li class="mh-contactus px-2"><a href="#">聯絡我們</a></li>
+                    <li class="mh-recruit"><a href="#">招賢納士</a></li>
+                </ul>
+            </div>
+        </div>
+      <div style="clear:both"></div>
     </div>
 </div>
-<div class="border-bottom pt-2 pb-3 px-md-4">
-<div class="container">
-    <div class="d-flex flex-column flex-md-row align-items-center bg-white">
-      <img class="my-0 mr-md-auto" src="images/sunrise-logo.png" width="150px" alt="sunrise-property-logo">
-      <nav class="my-2">
-        <a class="p-2" href="index.html"><i class="fas fa-home" style="color: #ec1d23;font-size:24px"></i></a>
-        <a class="p-2 mh-text-blue font-weight-bold" href="buy.html">買樓</a>
-        <a class="p-2 mh-text-blue font-weight-bold" href="rent.html">租樓</a>
-      </nav>
-    </div>
-</div>
-</div>
+<!-- end of menu -->
 
 <main role="main">
 
-<div class="bg-light">
+<div class="">
 
     <div class="propertycounter border-bottom">
         <div class="container">
@@ -64,39 +73,43 @@
         <div class="row">
 
             <!-- property filter -->
-            <div class="col-md-2 pl-5" style="border-right: 1px solid #dee2e6">   
+            <div class="col-md-2" style="border-right: 1px solid #dee2e6">   
                   
                 <!-- price select -->
                 <div class="price-select pb-5 border-bottom">
-                    <div class="filter-title py-3 font-weight-bold mh-text-blue">價格 (HK$)</div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">400萬以下</label>
+                    <div id="price-opener" class="filter-title py-3 font-weight-bold mh-text-blue">
+                        價格 (HK$) <i class="fas fa-angle-down" style="float: right"></i>
                     </div>
+                    <div id="price-show" style="display: none">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">400萬以下</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">400-600萬</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">400-600萬</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">600-800萬</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">600-800萬</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">800-1000萬</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">800-1000萬</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">1000萬以上</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">1000萬以上</label>
+                        </div>
                     </div>
                 </div>
                 <!-- end of price select -->
 
-
+                
                 <!-- size select -->
                 <div class="price-select pb-5 border-bottom">
                     <div class="filter-title py-3 font-weight-bold mh-text-blue">面積 (呎)</div>
@@ -186,74 +199,137 @@
             <div class="col-md-10 pb-5">
             <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue">太陽獨家樓盤</div>
 
-            <div class="row">
+                <!-- slick slider -->
+<div class="container-fluid">
+  <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue" style="text-align: center;">優質租+賣盤</div>
+  <div class="row">
+<ul id="lightSlider">
 
-                <!-- property card -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <a href="propertydetail.html"><img class="card-img-top" src="images/img10.jpg" alt="property image"></a>
-                        <div class="card-body">
-                              <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
-                                    <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
-                              </div>
-                              <div class="d-flex justify-content-between align-items-center pb-3">
-                                    <div class="mh-text-grey float-left">船景街9號</div>
-                              </div>
-                              <div class="d-flex justify-content-between align-items-center pb-3">
-                                    <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
-                                    <div class="mh-text-red float-right"><h5 class="font-weight-bold">售 HKD 320萬</h5></div>
-                              </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                              </div>
-                        </div>
-                    </div> <!-- card -->
-                </div> <!-- end of col-md-4 -->
-                <!-- end of property card -->
+    <li class="col-sm-12 col-md-6 col-lg-3">
+        <div class="shadow br-n card mb-4">
+            <a href="propertydetail.html"><img class="card-img-top" src="images/img1.jpg" alt="property image"></a>
+            <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
+                        <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">船景街9號</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
+                        <div class="mh-text-red float-right"><h5 class="font-weight-bold">租 HKD 2萬</h5></div>
+                  </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                  </div>
+            </div>
+        </div> 
+    </li>
 
-                <!-- property card -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <a href="propertydetail.html"><img class="card-img-top" src="images/img2.jpg" alt="property image"></a>
-                        <div class="card-body">
-                              <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
-                                    <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
-                              </div>
-                              <div class="d-flex justify-content-between align-items-center pb-3">
-                                    <div class="mh-text-grey float-left">船景街9號</div>
-                              </div>
-                              <div class="d-flex justify-content-between align-items-center pb-3">
-                                    <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
-                                    <div class="mh-text-red float-right"><h5 class="font-weight-bold">售 HKD 320萬</h5></div>
-                              </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                              </div>
-                        </div>
-                    </div> <!-- card -->
-                </div> <!-- end of col-md-4 -->
-                <!-- end of property card -->
+    <li class="col-sm-12 col-md-6 col-lg-3">
+        <div class="shadow br-n card mb-4">
+            <a href="propertydetail.html"><img class="card-img-top" src="images/img2.jpg" alt="property image"></a>
+            <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
+                        <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">船景街9號</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
+                        <div class="mh-text-red float-right"><h5 class="font-weight-bold">租 HKD 2萬</h5></div>
+                  </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                  </div>
+            </div>
+        </div> 
+    </li>
 
-                <!-- property card -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <a href="propertydetail.html"><img class="card-img-top" src="images/img1.jpg" alt="property image"></a>
-                        <div class="card-body">
-                              <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
-                                    <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
-                              </div>
-                              <div class="d-flex justify-content-between align-items-center pb-3">
-                                    <div class="mh-text-grey float-left">船景街9號</div>
-                              </div>
-                              <div class="d-flex justify-content-between align-items-center pb-3">
-                                    <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
-                                    <div class="mh-text-red float-right"><h5 class="font-weight-bold">售 HKD 320萬</h5></div>
-                              </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                              </div>
-                        </div>
-                    </div> <!-- card -->
-                </div> <!-- end of col-md-4 -->
-                <!-- end of property card -->
-                </div> <!-- end of row -->
+    <li class="col-sm-12 col-md-6 col-lg-3">
+        <div class="shadow br-n card mb-4">
+            <a href="propertydetail.html"><img class="card-img-top" src="images/img3.jpg" alt="property image"></a>
+            <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
+                        <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">船景街9號</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
+                        <div class="mh-text-red float-right"><h5 class="font-weight-bold">租 HKD 2萬</h5></div>
+                  </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                  </div>
+            </div>
+        </div> 
+    </li>
+
+    <li class="col-sm-12 col-md-6 col-lg-3">
+        <div class="shadow br-n card mb-4">
+            <a href="propertydetail.html"><img class="card-img-top" src="images/img5.jpg" alt="property image"></a>
+            <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
+                        <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">船景街9號</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
+                        <div class="mh-text-red float-right"><h5 class="font-weight-bold">租 HKD 2萬</h5></div>
+                  </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                  </div>
+            </div>
+        </div> 
+    </li>
+
+    <li class="col-sm-12 col-md-6 col-lg-3">
+        <div class="shadow br-n card mb-4">
+            <a href="propertydetail.html"><img class="card-img-top" src="images/img5.jpg" alt="property image"></a>
+            <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
+                        <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">船景街9號</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
+                        <div class="mh-text-red float-right"><h5 class="font-weight-bold">租 HKD 2萬</h5></div>
+                  </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                  </div>
+            </div>
+        </div> 
+    </li>
+
+    <li class="col-sm-12 col-md-6 col-lg-3">
+        <div class="shadow br-n card mb-4">
+            <a href="propertydetail.html"><img class="card-img-top" src="images/img5.jpg" alt="property image"></a>
+            <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center pt-2 pb-3">
+                        <div class="mh-text-blue float-left"><h5 class="font-weight-bold">黃埔花園 第02期 第15座</h5></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">船景街9號</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center pb-3">
+                        <div class="mh-text-grey float-left">實 450呎 | 建 500呎</div>
+                        <div class="mh-text-red float-right"><h5 class="font-weight-bold">租 HKD 2萬</h5></div>
+                  </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                  </div>
+            </div>
+        </div> 
+    </li>
+
+</ul> <!-- end of slick-slider -->
+</div>
+</div>
+<!-- end of slick slider -->
+
                 <!-- ==================================================  end of exclusive properties  ================================================ -->
                 <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue">精選樓盤</div>
 
@@ -425,51 +501,130 @@
 
 </main> <!-- End of main -->
 
+<!-- footer area -->
 <footer class="mh-bg-grey mh-text-white py-5 text-center">
     <div class="container">
-        <div class="row">
-            <div class="mh-footer-menu mauto text-center">
-                <table>
-                  <tr>
-                    <td class="px-3">搵樓 ● 搵太陽 @<a href="http://www.facebook.com"><img src="images/facebook-logo.png" width="60px" alt="facebook"></a></td>
-                  </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="mh-footer-menu mauto py-3">
-                <table>
-                  <tr>
-                    <td class="px-3">關於太陽</td>
-                    <td class="px-3">聯絡我們</td>
-                    <td class="px-3">招賢納士</td>
-                  </tr>
-                </table>
-            </div>
-        </div>
+       
         <div class="row">
             <div class="mh-footer mauto">
                 <div class="">太陽物業地產代理</div>
-                <table>
-                    <tr>
-                        <td class="px-3">公司牌照號碼 : C-018442</td>
-                        <td class="px-3">總行: 紅磡黃埔新村德民街60E號7C-4B舖</td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
+                            <td class="px-3">公司牌照號碼 : C-018442</td>
+                            <td class="px-3">總行: 紅磡黃埔新村德民街60E號7C-4B舖</td>
+                        </tr>
+                    </table>
                 <div class="copyright">Copyright <span>&copy;</span>2018 Sunrise Property Agency Limtied All Rights Reserved.</div>
             </div>
         </div>
+
     </div>
 </footer>
+<!-- end of footer area -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/lightslider.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("#lightSlider").lightSlider({
+              item: 4,
+              autoWidth: false,
+              slideMove: 1, // slidemove will be 1 if loop is true
+              slideMargin: 10,
+       
+              addClass: '',
+              mode: "slide",
+              useCSS: true,
+              cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+              easing: 'linear', //'for jquery animation',////
+       
+              speed: 400, //ms'
+              auto: true,
+              loop: true,
+              slideEndAnimation: true,
+              pause: 2000,
+       
+              keyPress: false,
+              controls: true,
+              prevHtml: '',
+              nextHtml: '',
+       
+              rtl:false,
+              adaptiveHeight:false,
+       
+              vertical:false,
+              verticalHeight:500,
+              vThumbWidth:100,
+       
+              thumbItem:10,
+              pager: true,
+              gallery: false,
+              galleryMargin: 5,
+              thumbMargin: 5,
+              currentPagerPosition: 'middle',
+       
+              enableTouch:true,
+              enableDrag:true,
+              freeMove:true,
+              swipeThreshold: 40,
+       
+              responsive : [
+
+              {
+                  breakpoint: 1199.98, 
+                  settings: {
+                      item: 3, 
+                      slideMove: 1 
+                  }
+              },
+
+              {
+                  breakpoint: 1023.98, 
+                  settings: {
+                      item: 2, 
+                      slideMove: 1 
+                  }
+              },
+              
+
+              {
+                  breakpoint: 767.98, 
+                  settings: {
+                      item: 1, 
+                      slideMove: 1 
+                  }
+              }
+
+              ],
+       
+              onBeforeStart: function (el) {},
+              onSliderLoad: function (el) {},
+              onBeforeSlide: function (el) {},
+              onAfterSlide: function (el) {},
+              onBeforeNextSlide: function (el) {},
+              onBeforePrevSlide: function (el) {}
+          }); 
+
+      });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $("#price-opener").click(function(){
+            $("#price-show").fadeToggle();
+        });
+
+    });
+    </script>
+
+    
 </body>
 </html>
