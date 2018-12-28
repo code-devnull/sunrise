@@ -30,7 +30,7 @@
 <div class="mh-header-menu border-bottom py-2 px-md-4">
     <div class="container">
         <div class="mh-logo d-flex flex-column flex-md-row align-items-center bg-white">
-            <img class="my-0 mr-md-auto" src="images/sunrise-logo.png" width="200px" alt="sunrise-property-logo">
+            <a href="index.html"><img class="my-0 mr-md-auto" src="images/sunrise-logo.png" width="200px" alt="sunrise-property-logo"></a>
         </div>
         
         <div class="mh-menu-misc">
@@ -45,7 +45,7 @@
                 <ul class="mh-menu-list">
                     <li class="mh-home px-2"><a href="index.html"><i class="fas fa-home" style="color: #ec1d23; font-size:26px"></i></li>
                     <li class="mh-buy px-2"><a href="buy.html">買樓</li>
-                    <li class="mh-lease px-2"><a href="#">租樓</a></li>
+                    <li class="mh-lease px-2"><a href="buy.html">租樓</a></li>
                     <li class="mh-aboutus px-2"><a href="#">關於太陽</a></li>
                     <li class="mh-contactus px-2"><a href="#">聯絡我們</a></li>
                     <li class="mh-recruit"><a href="#">招賢納士</a></li>
@@ -64,7 +64,7 @@
     <div class="propertycounter border-bottom">
         <div class="container">
             <div class="row">
-                <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue mauto">288 個賣盤 ● 面積 400-600呎</div>
+                <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue mauto">288 個賣盤 ● 面積<span id="output-area" class="px-2">400-600</span>呎</div>
             </div>
         </div>
     </div>
@@ -76,33 +76,35 @@
             <div class="col-md-2" style="border-right: 1px solid #dee2e6">   
                   
                 <!-- price select -->
-                <div class="price-select pb-5 border-bottom">
-                    <div id="price-opener" class="filter-title py-3 font-weight-bold mh-text-blue">
-                        價格 (HK$) <i class="fas fa-angle-down" style="float: right"></i>
+                <div class="price-select border-bottom">
+                    <div id="tagopen-listener_1" class="filter-title py-3 font-weight-bold mh-text-blue" style="cursor: pointer">
+                        <div style="float:left;">價格 (HK$)</div>
+                        <div class="" style="float: right"><i class="fas fa-angle-down fa-lg" style="vertical-align: middle;"></i></div>
+                        <div style="clear:both"></div>
                     </div>
-                    <div id="price-show" style="display: none">
+                    <div id="choice-body_1" class="pb-3" style="display: none">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" checked>
                             <label class="form-check-label" for="exampleRadios1">400萬以下</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">400-600萬</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">600-800萬</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">800-1000萬</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">1000萬以上</label>
                         </div>
                     </div>
@@ -111,82 +113,100 @@
 
                 
                 <!-- size select -->
-                <div class="price-select pb-5 border-bottom">
-                    <div class="filter-title py-3 font-weight-bold mh-text-blue">面積 (呎)</div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">400 以下</label>
+                <div class="price-select border-bottom">
+                    <div id="tagopen-listener_2" class="filter-title py-3 font-weight-bold mh-text-blue" style="cursor: pointer"> 
+                        <div style="float:left;">面積 (呎)</div>
+                        <div class="" style="float: right"><i class="fas fa-angle-down fa-lg" style="vertical-align: middle;"></i></div>
+                        <div style="clear:both"></div>
                     </div>
+                    <div id="choice-body_2" class="pb-3" style="display: none">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="400" checked>
+                            <label class="form-check-label" for="exampleRadios1">400 以下</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">400-600</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="400-600">
+                            <label class="form-check-label" for="exampleRadios1">400-600</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">600-800</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="600-800">
+                            <label class="form-check-label" for="exampleRadios1">600-800</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">800-1000</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="800-1000">
+                            <label class="form-check-label" for="exampleRadios1">800-1000</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">1000 以上</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="1000">
+                            <label class="form-check-label" for="exampleRadios1">1000 以上</label>
+                        </div>
                     </div>
                 </div>
                 <!-- end of size select -->
 
                 <!-- bedrooms select -->
-                <div class="price-select pb-5 border-bottom">
-                    <div class="filter-title py-3 font-weight-bold mh-text-blue">房間數目</div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">1</label>
+                <div class="price-select border-bottom">
+                    <div id="tagopen-listener_3" class="filter-title py-3 font-weight-bold mh-text-blue" style="cursor: pointer">
+                        <div style="float:left;">房間數目</div>
+                        <div class="" style="float: right"><i class="fas fa-angle-down fa-lg" style="vertical-align: middle;"></i></div>
+                        <div style="clear:both"></div>
                     </div>
+                    <div id="choice-body_3" class="pb-3" style="display: none">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">1</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">2</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">2</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">3</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">3</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">4</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">4</label>
+                        </div>
                     </div>
                 </div>
                 <!-- end of bedroom select -->
 
 
                 <!-- amenities select -->
-                <div class="price-select pb-5 border-bottom">
-                    <div class="filter-title py-3 font-weight-bold mh-text-blue">附加設施</div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">露台</label>
+                <div class="price-select border-bottom">
+                    <div id="tagopen-listener_4" class="filter-title py-3 font-weight-bold mh-text-blue" style="cursor: pointer">
+                        <div style="float:left;">附加設施</div>
+                        <div class="" style="float: right"><i class="fas fa-angle-down fa-lg" style="vertical-align: middle;"></i></div>
+                        <div style="clear:both"></div>
                     </div>
+                    <div id="choice-body_4" class="pb-3" style="display: none">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">露台</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">停車場</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">停車場</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">工人房</label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">工人房</label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">會所</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">會所</label>
+                        </div>
                     </div>
                 </div>
                 <!-- end of amenities select -->
@@ -197,13 +217,11 @@
 
             <!-- property buy / rent -->
             <div class="col-md-10 pb-5">
-            <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue">太陽獨家樓盤</div>
-
-                <!-- slick slider -->
+<!-- slick slider -->
 <div class="container-fluid">
-  <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue" style="text-align: center;">優質租+賣盤</div>
-  <div class="row">
-<ul id="lightSlider">
+    <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue" style="text-align: center;">優質賣盤</div>
+    <div class="row">
+    <ul id="lightSlider">
 
     <li class="col-sm-12 col-md-6 col-lg-3">
         <div class="shadow br-n card mb-4">
@@ -472,11 +490,11 @@
                 <div class="mh-pagination mauto">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination pagination-lg">
-                            <li class="page-item font-weight-bold"><a class="page-link" href="">上一頁</a></li>
+                            <li class="page-item font-weight-bold"><a class="page-link" href=""><i class="fas fa-chevron-circle-left fa-lg"></i></a></li>
                             <li class="page-item font-weight-bold"><a class="page-link" href="">1</a></li>
                             <li class="page-item font-weight-bold"><a class="page-link" href="">2</a></li>
                             <li class="page-item font-weight-bold"><a class="page-link" href="">3</a></li>
-                            <li class="page-item font-weight-bold"><a class="page-link" href="">下一頁</a></li>
+                            <li class="page-item font-weight-bold"><a class="page-link" href=""><i class="fas fa-chevron-circle-right fa-lg"></i></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -504,20 +522,14 @@
 <!-- footer area -->
 <footer class="mh-bg-grey mh-text-white py-5 text-center">
     <div class="container">
-       
         <div class="row">
             <div class="mh-footer mauto">
                 <div class="">太陽物業地產代理</div>
-                    <table>
-                        <tr>
-                            <td class="px-3">公司牌照號碼 : C-018442</td>
-                            <td class="px-3">總行: 紅磡黃埔新村德民街60E號7C-4B舖</td>
-                        </tr>
-                    </table>
-                <div class="copyright">Copyright <span>&copy;</span>2018 Sunrise Property Agency Limtied All Rights Reserved.</div>
+                <div class="">公司牌照號碼 : C-018442</div>
+                <div class="">總行: 紅磡黃埔新村德民街60E號7C-4B舖</div>
+                <div class="copyright">Copyright &copy;2018 Sunrise Property Agency Limtied All Rights Reserved.</div>
             </div>
         </div>
-
     </div>
 </footer>
 <!-- end of footer area -->
@@ -618,11 +630,26 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-          $("#price-opener").click(function(){
-            $("#price-show").fadeToggle();
+          $("#tagopen-listener_1").off("click").on("click",function(){
+            $("#choice-body_1").fadeToggle('slow');
         });
-
+          $("#tagopen-listener_2").off("click").on("click",function(){
+            $("#choice-body_2").fadeToggle('slow');
+        });
+          $("#tagopen-listener_3").off("click").on("click",function(){
+            $("#choice-body_3").fadeToggle('slow');
+        });
+          $("#tagopen-listener_4").off("click").on("click",function(){
+            $("#choice-body_4").fadeToggle('slow');
+        });
     });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $("#price-opener").click(function(){
+            $("#price-show").fadeToggle('slow');
+        });
     </script>
 
     
