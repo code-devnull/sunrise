@@ -46,9 +46,9 @@
                     <li class="mh-home px-2"><a href="index.html"><i class="fas fa-home" style="color: #ec1d23; font-size:26px"></i></li>
                     <li class="mh-buy px-2"><a href="buy.html">買樓</li>
                     <li class="mh-lease px-2"><a href="buy.html">租樓</a></li>
-                    <li class="mh-aboutus px-2"><a href="#">關於太陽</a></li>
-                    <li class="mh-contactus px-2"><a href="#">聯絡我們</a></li>
-                    <li class="mh-recruit pl-2"><a href="#">招賢納士</a></li>
+                    <li class="mh-aboutus px-2"><a href="aboutus.html">關於太陽</a></li>
+                    <li class="mh-contactus px-2"><a href="contact.html">聯絡我們</a></li>
+                    <li class="mh-recruit pl-2"><a href="career.html">招賢納士</a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +64,7 @@
     <div class="propertycounter border-bottom">
         <div class="container">
             <div class="row">
-                <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue mauto">288 個賣盤 ● 面積<span id="output-area" class="px-2">400-600</span>呎</div>
+                <div class="feature-proprety-title py-3 font-weight-bold mh-text-blue mauto">288 個賣盤 ● 面積<span id="output-area" class="px-2">400</span>呎</div>
             </div>
         </div>
     </div>
@@ -84,27 +84,27 @@
                     </div>
                     <div id="choice-body_1" class="pb-3" style="display: none">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" checked>
+                            <input name="price" class="form-check-input" type="radio" checked>
                             <label class="form-check-label" for="exampleRadios1">400萬以下</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio">
+                            <input name="price" class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">400-600萬</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio">
+                            <input name="price" class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">600-800萬</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio">
+                            <input name="price" class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">800-1000萬</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio">
+                            <input name="price" class="form-check-input" type="radio">
                             <label class="form-check-label" for="exampleRadios1">1000萬以上</label>
                         </div>
                     </div>
@@ -120,30 +120,32 @@
                         <div style="clear:both"></div>
                     </div>
                     <div id="choice-body_2" class="pb-3" style="display: none">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="400" checked>
-                            <label class="form-check-label" for="exampleRadios1">400 以下</label>
-                        </div>
+                        <form name="area-form">
+                            <div class="form-check">
+                                <input name="area" class="form-check-input" type="radio" value="400" checked>
+                                <label class="form-check-label" for="exampleRadios1">400 以下</label>
+                            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="400-600">
-                            <label class="form-check-label" for="exampleRadios1">400-600</label>
-                        </div>
+                            <div class="form-check">
+                                <input name="area" class="form-check-input" type="radio" value="400-600">
+                                <label class="form-check-label" for="exampleRadios2">400-600</label>
+                            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="600-800">
-                            <label class="form-check-label" for="exampleRadios1">600-800</label>
-                        </div>
+                            <div class="form-check">
+                                <input name="area" class="form-check-input" type="radio" value="600-800">
+                                <label class="form-check-label" for="exampleRadios3">600-800</label>
+                            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="800-1000">
-                            <label class="form-check-label" for="exampleRadios1">800-1000</label>
-                        </div>
+                            <div class="form-check">
+                                <input name="area" class="form-check-input" type="radio" value="800-1000">
+                                <label class="form-check-label" for="exampleRadios4">800-1000</label>
+                            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="1000">
-                            <label class="form-check-label" for="exampleRadios1">1000 以上</label>
-                        </div>
+                            <div class="form-check">
+                                <input name="area" class="form-check-input" type="radio" value="1000">
+                                <label class="form-check-label" for="exampleRadios5">1000 以上</label>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!-- end of size select -->
@@ -649,6 +651,17 @@
         $(document).ready(function(){
           $("#price-opener").click(function(){
             $("#price-show").fadeToggle('slow');
+        });
+    </script>
+
+    <script type="text/javascript">
+        
+        $("input[name=area]").off("click").on("click",function(){
+
+            var areaValue = $(this).val();
+
+            $("#output-area").html(areaValue);
+
         });
     </script>
 
