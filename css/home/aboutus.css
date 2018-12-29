@@ -2,6 +2,72 @@
 	color: 
 }
 
-nav ol li a {
-	text-decoration: none;
+.left {
+	display: none;
+}
+
+/* Small devices (portait phones, 576px and up) */
+@media (max-width: 575.98px) {
+
+	.right {
+		display: none;
+	}
+
+	.left {
+		display: block;
+	}
+
+	.career-banner img {
+		
+		display: none;
+	}
+
+	.aboutus-banner img {
+		display: none;
+	}
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767.98px) { 
+
+	.right {
+		display: none;
+	}
+
+	.left {
+		display: block;
+	}
+
+	.career-banner img {
+		display: none;
+	}
+
+	.aboutus-banner img {
+		display: none;
+	}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991.98px) {
+
+	.right {
+		display: none;
+	}
+
+	.left {
+		display: block;
+	}
+
+	.career-banner img {
+		display: none;
+	}
+
+	.aboutus-banner img {
+		display: none;
+	}
+
 }
